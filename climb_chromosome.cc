@@ -3,7 +3,7 @@
 #include <cassert>
 
 
-ClimbChromosome::mutate(){
+void ClimbChromosome::mutate(){
    //evaluate fitness
    double fitness;
    fitness = get_fitness();
@@ -37,13 +37,11 @@ ClimbChromosome::mutate(){
    */
    int secondswapindex = (p + 1) % order_.size();
    std::swap(order_[p], order_[secondswapindex]);
-   if (get_fitensss() > fitness){
+   if (get_fitness() > fitness){
      std::swap(order_[p], order_[secondswapindex]);     //this last switch is NOT the best, reverse it
     if (best){
       std::swap(order_[p], order_[firstswapindex]);      //first switch was good, go back to that
     }
     }
-   }
-
    //figure out which produced the fittest, and choose it as the resulting chromosome
 }

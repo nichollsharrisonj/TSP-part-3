@@ -10,9 +10,10 @@ class ClimbChromosome: public Chromosome {
         }
         virtual void mutate();
 
-
+        /*
         virtual std::pair<ClimbChromosome*, ClimbChromosome*>
         recombine(const ClimbChromosome* other);
-        
+        */
+
         ClimbChromosome(const Cities *);
 };
