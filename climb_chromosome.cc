@@ -12,15 +12,18 @@ void ClimbChromosome::mutate(){
    //pick a random point and swap with n-1
    std::uniform_int_distribution<int> dist(0, order_.size() - 1);
    int p = dist(generator_);
-   /*
+
+   int firstswapindex = p - 1;
    if (p == 0){
-       int swapindex = order_.size() - 1;
+       firstswapindex = order_.size() - 1;
    }
+   /*
    else {
-       int swapindex = p - 1;
+       int firstswapindex = p - 1;
    }
    */
-   int firstswapindex = (p - 1) % order_.size();     //this gets the p - 1 term and will wraparound if p = 0
+
+   //int firstswapindex = (p - 1) % order_.size();     //this gets the p - 1 term and will wraparound if p = 0
    std::swap(order_[p], order_[firstswapindex]);
    if (get_fitness() < fitness){
      best = 1;                                   //save that there's an improvement
