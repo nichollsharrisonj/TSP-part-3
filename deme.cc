@@ -4,7 +4,7 @@
  */
 
 #include "cities.hh"
-#include "chromosome.hh"
+#include "climb_chromosome.hh"
 #include "deme.hh"
 
 #include <algorithm>
@@ -20,7 +20,7 @@ Deme::Deme(const Cities* cities_ptr, unsigned pop_size, double mut_rate)
 {
   // Create random Chromosomes and put into population vector
   for (auto& cp : pop_) {
-    cp = new Chromosome(cities_ptr);
+    cp = new ClimbChromosome(cities_ptr);
   }
 }
 
@@ -70,7 +70,7 @@ void Deme::compute_next_generation()
 
 //////////////////////////////////////////////////////////////////////////////
 // Return a copy of the chromosome with the highest fitness.
-const Chromosome* Deme::get_best() const
+const ClimbChromosome* Deme::get_best() const
 {
   assert(!pop_.empty());
   return *std::max_element(pop_.cbegin(), pop_.cend(), [](auto cp1, auto cp2){
@@ -81,7 +81,7 @@ const Chromosome* Deme::get_best() const
 // Randomly select a chromosome in the population based on fitness and
 // return a pointer to that chromosome.
 // Uses roulette-wheel selection
-Chromosome* Deme::select_parent()
+ClimbChromosome* Deme::select_parent()
 {
   // Figure out what the total sum of fitness in pop_ is:
   const double total_fitness = std::accumulate(pop_.cbegin(), pop_.cend(), 0.,
@@ -102,5 +102,3 @@ Chromosome* Deme::select_parent()
 
   return *it;
 }
-
-
