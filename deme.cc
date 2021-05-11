@@ -58,8 +58,8 @@ void Deme::compute_next_generation()
     }
 
     auto children = p1->recombine(p2);
-    newpop[i++] = children.first;
-    newpop[i++] = children.second;
+    newpop[i++] = dynamic_cast<ClimbChromosome*>(children.first);
+    newpop[i++] = dynamic_cast<ClimbChromosome*>(children.second);
   }
 
   for (auto cp : pop_) {
