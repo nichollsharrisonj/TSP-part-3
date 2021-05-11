@@ -16,7 +16,8 @@ Chromosome::Chromosome(const Cities* cities_ptr)
 {
   assert(is_valid());
 }
-
+Chromosome::Chromosome(){
+}
 //////////////////////////////////////////////////////////////////////////////
 // Clean up as necessary
 Chromosome::~Chromosome()
