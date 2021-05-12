@@ -1,6 +1,7 @@
 #include "cities.hh"
 #include "deme.hh"
 #include "climb_chromosome.hh"
+#include <vector>
 
 #pragma once
 
