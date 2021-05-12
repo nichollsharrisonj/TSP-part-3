@@ -21,4 +21,4 @@
 
 
 ##### Data Collection
-- All of the data sets were made using a population size of 100 and a mutation rate of 50%
+- All of the data sets were made using a population size of `10,000` and a mutation rate of 10%
