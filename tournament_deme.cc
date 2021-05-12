@@ -12,6 +12,12 @@ ClimbChromosome* TournamentDeme::select_parent()
     //Take consecutive pairs in the set of Parents
     for (int i = 0; i < parentsvector.size(); i = i + 2){ //Iterate through every other index
       //Find max of first parent and parent after it
+      if (pop_[i] < pop_[i+1]){
+        pop_.erase(i);
+      }
+      else {
+        pop_.erase(i+1);
+      }
       //Remove the other parent
     }
 }
