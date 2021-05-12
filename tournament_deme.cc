@@ -1,4 +1,6 @@
 #include "tournament_deme.hh"
+#pragma once
+
 ClimbChromosome* TournamentDeme::select_parent()
 {
     //Select P parents at random, where P is a constant power of two that you choose
