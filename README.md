@@ -14,7 +14,7 @@
   - this means everything about `ClimbChromosome` and `Chromosome` is the same except for the overwritten mutation method
 
 
-##### Override Selection
+##### Override Selection to use Tournament Selection
 - To select the random parents, we used a vector called `parentsvector`, which stores the indices of the parents.
   - we used `std::uniform_real_distribution` to generate random indices within the range of the size of the population.
 - We compared the pairs of parents by iterating through the parentsvector, deleting the less fit of each pair of parents.
