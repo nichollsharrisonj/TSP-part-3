@@ -13,4 +13,4 @@ class TournamentDeme: public Deme {
         virtual ClimbChromosome* select_parent();
     private:
         const int parentschosen_ = 8;
-}
+};

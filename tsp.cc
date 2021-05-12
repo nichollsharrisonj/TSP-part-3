@@ -6,7 +6,6 @@
 
 #include "cities.hh"
 #include "deme.hh"
-#include "tournament_deme.hh"
 
 #include <algorithm>
 #include <cassert>
@@ -14,6 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include <numeric>
+#include "tournament_deme.hh"
 
 //////////////////////////////////////////////////////////////////////////////
 // Check whether a specific ordering reduces the total path distance in cities
