@@ -13,5 +13,5 @@ class TournamentDeme: public Deme {
     protected:
         virtual ClimbChromosome* select_parent();
     private:
-        const int parentschosen_ = 8;
+        const int parentschosen_ = 32;
 };
