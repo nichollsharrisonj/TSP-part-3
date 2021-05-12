@@ -2,8 +2,8 @@
 #include <algorithm>
 #include <cassert>
 
-ClimbChromosome::ClimbChromosome(const Cities *){
-}
+//ClimbChromosome::ClimbChromosome(const Cities *){
+//}
 void ClimbChromosome::mutate(){
    //evaluate fitness
    double fitness;

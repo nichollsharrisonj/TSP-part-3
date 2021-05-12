@@ -15,5 +15,7 @@ class ClimbChromosome: public Chromosome {
         recombine(const ClimbChromosome* other);
         */
 
-        ClimbChromosome(const Cities *);
+        ClimbChromosome(const Cities* cities)
+        : Chromosome(cities)
+        {}
 };
