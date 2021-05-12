@@ -15,8 +15,6 @@ ClimbChromosome* TournamentDeme::select_parent()
     while (parentsvector.size() > 1){
       for (unsigned long i = 0; i < parentsvector.size(); i++){ //Iterate through every index, after one is deleted
         //Find max of first parent and parent after it
-        auto test = parentsvector[i];
-        test++;
         if (pop_[parentsvector[i]]->get_fitness() < pop_[parentsvector[i+1]]->get_fitness()){
           parentsvector.erase(parentsvector.begin() + i);
         }
