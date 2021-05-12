@@ -1,7 +1,16 @@
+#include "cities.hh"
+#include "deme.hh"
+#include "climb_chromosome.hh"
+
+#pragma once
+
 class TournamentDeme: public Deme {
     public:
+      TournamentDeme(const Cities* cities_ptr, unsigned pop_size, double mut_rate)
+      : Deme(cities_ptr, pop_size, mut_rate)
+      {}
     protected:
         virtual ClimbChromosome* select_parent();
     private:
-        int parentschosen_ = 8;
+        const int parentschosen_ = 8;
 }
